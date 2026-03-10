@@ -23,10 +23,17 @@ setInterval(showSlide,4000);
 
 
 // MOBILE MENU
-
 const toggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".nav-links");
 
-toggle.addEventListener("click",()=>{
+toggle.addEventListener("click", () => {
+
 nav.classList.toggle("active");
+
+if(nav.classList.contains("active")){
+toggle.innerHTML = "✕";
+}else{
+toggle.innerHTML = "☰";
+}
+
 });
